@@ -4,14 +4,14 @@ from ev3dev2.sensor.lego import ColorSensor
 from ev3dev2.motor import OUTPUT_A, OUTPUT_B, OUTPUT_C, OUTPUT_D
 from ev3dev2.motor import SpeedPercent, MoveTank, LineFollowErrorTooFast
 
-tank = MoveTank(OUTPUT_B, OUTPUT_C)
-tank.cs = ColorSensor(INPUT_1)
+tank = MoveTank(OUTPUT_A, OUTPUT_D)
+tank.cs = ColorSensor(INPUT_4)
 try:
     tank.follow_line(
         kp=0.8, ki=0.25, kd=14,
         target_light_intensity = 30,
         follow_left_edge = True,
-        speed=SpeedPercent(10)
+        speed=SpeedPercent(-1)
     )
 except LineFollowErrorTooFast:
     tank.stop()

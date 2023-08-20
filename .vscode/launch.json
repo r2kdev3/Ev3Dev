@@ -8,7 +8,7 @@
             "name": "Download and Run my-program",
             "type": "ev3devBrowser",
             "request": "launch",
-            "program": "/home/robot/Ev3Dev/Dog.py",
+            "program": "/home/robot/Ev3Dev/PID.py",
             "interactiveTerminal": true
         }
     ]
